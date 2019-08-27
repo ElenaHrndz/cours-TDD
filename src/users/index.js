@@ -16,7 +16,7 @@ const handlers = ({ axios }) => ({
   },
   delete: async(req, res) => {
     const { id } = req.params
-    const { data } = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+    await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
     res.sendStatus(204)
   },
 })
